@@ -1,0 +1,78 @@
+{
+  "name": "00u43-XMD",
+  "version": "2.4.5",
+  "description": "00u43 byDeniz - WhatsApp Bot",
+  "logo": "https://i.imgur.com/1DkLGVk.jpeg",
+  "keywords": ["whatsapp", "bot", "md"],
+  "repository": "https://github.com/chrisbydeniz/00u43-XMD",
+  "stack": "container",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "env": {
+    "SESSION_ID": {
+      "description": "Enter your 00u43 session id here; must start with 00U43~",
+      "value": "",
+      "required": false
+    },
+    "BOT_NAME": {
+      "description": "Enter your bot name here",
+      "value": "00u43-Bot",
+      "required": false
+    },
+    "OWNER_NUMBER": {
+      "description": "Enter your number here: 33753191305",
+      "value": "33753191305",
+      "required": true
+    },
+    "OWNER_NAME": {
+      "description": "Enter your name here",
+      "value": "Deniz",
+      "required": true
+    },
+    "STICKER_PACK_NAME": {
+      "description": "Sticker pack name",
+      "value": "00u43",
+      "required": false
+    },
+    "STICKER_AUTHOR_NAME": {
+      "description": "Sticker author name",
+      "value": "Deniz",
+      "required": false
+    },
+    "HEROKU_API_KEY": {
+      "description": "Enter heroku API key here",
+      "value": "",
+      "required": false
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Enter exactly the same app name you've entered above.",
+      "value": "",
+      "required": false
+    },
+    "TIMEZONE": {
+      "description": "Enter your timezone here",
+      "value": "Europe/Paris",
+      "required": false
+    },
+   "GITHUB_TOKEN": {
+      "description": "IMPORTANT: Follow these steps to generate your GitHub token correctly...",
+      "value": "",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ]
+}
